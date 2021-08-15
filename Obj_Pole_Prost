@@ -1,0 +1,48 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+
+using namespace std;
+
+class pole_prostokata
+{
+
+public:
+    float a,b,pole;
+
+    czytaj_dane();
+
+    przetworz_dane();
+
+    wyswietl_dane();
+
+};
+
+pole_prostokata::czytaj_dane()
+{
+    cout<<"Podaj wartosci bokow a oraz b: "<<endl;
+    cin>>a>>b;
+
+}
+
+pole_prostokata::przetworz_dane()
+{
+    pole=a*b;
+}
+pole_prostokata::wyswietl_dane()
+{
+    cout<<fixed;
+    cout<<setprecision(2);
+
+    cout<<"Pole prostokata to: "<<pole<<endl;
+}
+int main()
+{
+    pole_prostokata pole;
+    pole.czytaj_dane();
+    pole.przetworz_dane();
+    pole.wyswietl_dane();
+    getch();
+
+    return 0;
+}
